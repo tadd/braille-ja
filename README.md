@@ -19,9 +19,9 @@ BrailleJa
 
 ## 使い方
 
-まだまだ未熟なので、簡単な使い方が準備できてないのをご了承ください。
+まだまだ未熟なので、一部しか翻訳できないのをご注意ください。
 
-    BrailleJa::KanaTranslator.translate("あいうえお")
+    'あいうえお'.kana_to_braille_ja
     # => "⠁⠃⠉⠋⠊"
 
 ## 貢献するには
