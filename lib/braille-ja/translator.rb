@@ -1,6 +1,6 @@
 # coding: utf-8
-module JapaneseBrailleConverter
-  class KanaToBrailleConverter
+module BrailleJa
+  class KanaToBrailleTranslator
     TABLE = Hash[*%W[
       あ \u2801
       い \u2803
@@ -12,14 +12,14 @@ module JapaneseBrailleConverter
     def initialize(option={})
     end
 
-    def convert(source)
+    def translate(source)
       source.each_char.map do |c|
         TABLE[c] || c
       end.join
     end
 
-    def self.convert(kana, option={})
-      self.new(option).convert(kana)
+    def self.translate(kana, option={})
+      new(option).translate(kana)
     end
   end
 end
