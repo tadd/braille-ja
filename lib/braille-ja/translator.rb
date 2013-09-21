@@ -1,6 +1,6 @@
 # coding: utf-8
 module BrailleJa
-  class KanaToBrailleTranslator
+  class KanaTranslator
     TABLE = Hash[*%W[
       あ \u2801
       い \u2803

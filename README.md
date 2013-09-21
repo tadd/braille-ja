@@ -21,7 +21,7 @@ BrailleJa
 
 まだまだ未熟なので、簡単な使い方が準備できてないのをご了承ください。
 
-    BrailleJa::KanaToBrailleTranslator.translate("あいうえお")
+    BrailleJa::KanaTranslator.translate("あいうえお")
     # => "⠁⠃⠉⠋⠊"
 
 ## 貢献するには
