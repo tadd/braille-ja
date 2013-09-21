@@ -7,11 +7,11 @@ describe BrailleJa::KanaTranslator do
   end
 
   it 'translates Japanese string easily' do
-    expect('あいうえお'.kana_to_braille_ja).to eq '⠁⠃⠉⠋⠊'
+    expect('あいうえお'.kana_to_braille).to eq '⠁⠃⠉⠋⠊'
   end
 
   it 'never translates Japanese Kanji but leave as is' do
     kanji = '半沢直樹倍返'
-    expect(kanji.kana_to_braille_ja).to eq kanji
+    expect(kanji.kana_to_braille).to eq kanji
   end
 end
