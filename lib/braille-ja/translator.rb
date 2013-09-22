@@ -1,13 +1,9 @@
 # coding: utf-8
+require 'json'
+
 module BrailleJa
   class KanaTranslator
-    TABLE = Hash[*%W[
-      あ \u2801
-      い \u2803
-      う \u2809
-      え \u280B
-      お \u280A
-    ]]
+    TABLE = JSON.parse(IO.read(__dir__ + '/table/braille-ja-table-raw.json'))
 
     def initialize(option={})
     end
