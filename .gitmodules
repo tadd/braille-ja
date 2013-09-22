@@ -1,0 +1,6 @@
+[submodule "table"]
+	path = table
+	url = git@github.com:tadd/braille-ja-table.git
+[submodule "lib/braille-ja/table"]
+	path = lib/braille-ja/table
+	url = git@github.com:tadd/braille-ja-table.git
