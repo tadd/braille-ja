@@ -3,7 +3,7 @@ require 'json'
 
 module BrailleJa
   class KanaTranslator
-    TABLE = JSON.parse(IO.read(__dir__ + '/table/braille-ja-table-raw.json'))
+    TABLE = JSON.parse(IO.read(__dir__ + '/braille-ja-table-raw.json'))
 
     def initialize(option={})
     end
