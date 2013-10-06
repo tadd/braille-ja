@@ -21,7 +21,7 @@ BrailleJa
 
 まだまだ未熟なので、一部しか翻訳できないのをご注意ください。
 
-    'あいうえお'.kana_to_braille_ja
+    'あいうえお'.kana_to_braille
     # => "⠁⠃⠉⠋⠊"
 
 ## 貢献するには
