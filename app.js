@@ -1,10 +1,13 @@
 "use strict";
 
 var TRANSLATE_ENDPOINT = "//braille-ja.herokuapp.com/translate"
+var BRAILLE_PATTERN = /[\u2800-\u28ff]+/g
 
 $("#translate").click(function(ev) {
     $.getJSON(TRANSLATE_ENDPOINT, {text: $("#original").val()}, function (obj) {
-	$("#translated").val(obj["translated"]);
+	var marked = obj["translated"].
+	    replace(BRAILLE_PATTERN, "<span class='braille-char'>$&</span>");
+	$("#translated").val(marked);
     });
 });
 
