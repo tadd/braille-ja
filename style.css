@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'DejaVuSans-Bold';
+    src: url('DejaVuSans-Bold-Braille-Only.woff') format('woff');
+}
+
+.braille-char {
+    font-family: 'DejaVuSans-Bold';
+}
