@@ -1,0 +1,45 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Braille-ja demo</title>
+  <meta name="description" content="braille-jaのちょっとしたデモ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Tadashi Saito">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <!--[if lt IE 9]>
+   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <h1><a href="https://github.com/tadd/braille-ja">braille-ja</a>のちょっとしたデモ</h1>
+    <div class="well">
+      <p>
+	<span class="label label-info">ためしかた</span> たとえば、上の欄に<a herf="#" id="input-example">あいうえおと入力</a>したあと、中央のボタンを押してみてください。点字に翻訳された文字が下の欄に出てきます。
+      </p>
+      <p>
+	※現在、ひらがなの一部にのみ対応しています。
+      </p>
+    </div>
+    <form role="form" action="#">
+      <div class="form-group">
+	<div class="text-center">
+	  <p>
+	    <input type="text" id="original" class="form-control"></textarea>
+	  </p>
+	  <p>
+	    <button type="button" id="translate" class="text-center btn btn-primary btn-lg">⇓</button>
+	  </p>
+	  <p>
+	    <input type="text" id="translated" class="form-control" readonly="readonly"></textarea>
+	  </p>
+	</div>
+      </div>
+    </form>
+    </p>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
