@@ -7,7 +7,7 @@ $("#translate").click(function(ev) {
     $.getJSON(TRANSLATE_ENDPOINT, {text: $("#original").val()}, function (obj) {
 	var marked = obj["translated"].
 	    replace(BRAILLE_PATTERN, "<span class='braille-char'>$&</span>");
-	$("#translated").val(marked);
+	$("#translated").html(marked);
     });
 });
 
