@@ -1,7 +1,9 @@
 BrailleJa
 =========
 
-日本語と点字を扱う変換器です
+日本語と点字を扱う変換器です。Github Pagesに簡単なデモを作りました。
+
+http://tadd.github.io/braille-ja/
 
 ## インストール
 
