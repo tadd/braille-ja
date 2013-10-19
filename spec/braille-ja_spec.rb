@@ -19,6 +19,10 @@ describe BrailleJa::Translator do
     expect('abcde'.to_braille).to eq '⠁⠃⠉⠙⠑'
     expect('12345'.to_braille).to eq '⠁⠃⠉⠙⠑'
   end
+
+  it 'translates Yo-on' do
+    expect('しゅっしゃ'.to_braille).to eq '⠈⠹⠂⠈⠱'
+  end
 end
 
 describe BrailleJa::Tokenizer do

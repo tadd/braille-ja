@@ -9,7 +9,7 @@ module BrailleJa
     end
 
     def translate(source)
-      source.each_char.map do |c|
+      Tokenizer.tokenize(source).map do |c|
         TABLE[c] || c
       end.join
     end
