@@ -1,7 +1,7 @@
 module BrailleJa
   module StringExt
-    def kana_to_braille
-      KanaTranslator.translate(self)
+    def to_braille
+      Translator.translate(self)
     end
   end
 end
