@@ -1,4 +1,5 @@
 require_relative 'braille-ja/version'
+require_relative 'braille-ja/tokenizer'
 require_relative 'braille-ja/translator'
 require_relative 'braille-ja/string-ext'
 

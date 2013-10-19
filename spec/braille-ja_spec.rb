@@ -20,3 +20,9 @@ describe BrailleJa::Translator do
     expect('12345'.to_braille).to eq '⠁⠃⠉⠙⠑'
   end
 end
+
+describe BrailleJa::Tokenizer do
+  it 'tokenizes japanese by syllable' do
+    expect(described_class.tokenize('しゅっしゃ')).to eq %w[しゅ っ しゃ]
+  end
+end
