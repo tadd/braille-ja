@@ -14,4 +14,9 @@ describe BrailleJa::Translator do
     kanji = '半沢直樹倍返'
     expect(kanji.to_braille).to eq kanji
   end
+
+  it 'translates alphabet or number' do
+    expect('abcde'.to_braille).to eq '⠁⠃⠉⠙⠑'
+    expect('12345'.to_braille).to eq '⠁⠃⠉⠙⠑'
+  end
 end
