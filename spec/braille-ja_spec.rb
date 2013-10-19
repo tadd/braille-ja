@@ -11,8 +11,8 @@ describe BrailleJa::Translator do
   end
 
   it 'never translates Japanese Kanji but leave as is' do
-    kanji = '半沢直樹倍返'
-    expect(kanji.to_braille).to eq kanji
+    expect('半沢直樹倍返し'.to_braille).to eq 'はんざわなおきばいかえし'.to_braille
+    expect('安心安全半澤直樹'.to_braille).to eq 'あんしんあんぜんはんざわなおき'.to_braille
   end
 
   it 'translates alphabet or number' do
