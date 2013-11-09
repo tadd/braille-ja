@@ -16,20 +16,11 @@
 <body>
   <div class="container">
     <h1><a href="https://github.com/tadd/braille-ja">braille-ja</a>のちょっとしたデモ</h1>
-    <p><a href="https://github.com/tadd/braille-ja">braille-ja</a>以外にも、静的テーブルとしては<a href="https://github.com/tadd/braille-ja-table">braille-ja-table</a>を、JSON APIサーバーの実装として<a href="https://github.com/tadd/braille-ja-web">braille-ja-web</a>を使用しています。</p>
-    <div class="well">
-      <p>
-	<span class="label label-info">ためしかた</span> たとえば、上の欄に<a href="#" id="input-example">あいうえおと入力</a>したあと、中央のボタンを押してみてください。点字に翻訳された文字が下の欄に出てきます。
-      </p>
-      <p>
-	※現在、ひらがなの一部、半角アルファベット小文字、半角数字にのみ対応しています。区切り文字等の出力も未対応です。
-      </p>
-    </div>
     <form role="form" action="#">
       <div class="form-group">
 	<div class="text-center">
 	  <p>
-	    <input type="text" id="original" class="form-control" />
+	    <input type="text" id="original" class="form-control" value="あいうえお" />
 	  </p>
 	  <p>
 	    <button type="button" id="translate" class="text-center btn btn-primary btn-lg">⇓</button>
@@ -38,6 +29,14 @@
 	</div>
       </div>
     </form>
+    <footer>
+      <p>
+	現在、ひらがなの一部、半角アルファベット小文字、半角数字にのみ対応しています。区切り文字等の出力も未対応です。
+      </p>
+      <p>
+	このページでは<a href="https://github.com/tadd/braille-ja">braille-ja</a>以外にも、<a href="https://github.com/tadd/braille-ja-table">braille-ja-table</a>と<a href="https://github.com/tadd/braille-ja-web">braille-ja-web</a>を使用しています。
+      </p>
+    </footer>
   </div>
   <script src="http://code.jquery.com/jquery.min.js"></script>
   <script src="app.js"></script>
