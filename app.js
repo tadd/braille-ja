@@ -1,6 +1,6 @@
 "use strict";
 
-var TRANSLATE_ENDPOINT = "//braille-ja.herokuapp.com/translate"
+var TRANSLATE_ENDPOINT = "http://braille-ja.herokuapp.com/translate"
 var BRAILLE_PATTERN = /[\u2800-\u28ff]+/g
 
 $("#translate").click(function(ev) {
