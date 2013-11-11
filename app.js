@@ -1,6 +1,7 @@
 "use strict";
 
 var TRANSLATE_ENDPOINT = "http://braille-ja.herokuapp.com/translate"
+var PING_ENDPOINT = "http://braille-ja.herokuapp.com/ping"
 var BRAILLE_PATTERN = /[\u2800-\u28ff]+/g
 
 $("#translate").click(function(ev) {
@@ -14,3 +15,5 @@ $("#translate").click(function(ev) {
 $("#input-example").click(function(ev) {
     $("#original").val("あいうえお")
 });
+
+$.getJSON(PING_ENDPOINT, function () {});
