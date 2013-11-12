@@ -12,8 +12,4 @@ $("#translate").click(function(ev) {
     });
 });
 
-$("#input-example").click(function(ev) {
-    $("#original").val("あいうえお")
-});
-
 $.getJSON(PING_ENDPOINT, function () {});
