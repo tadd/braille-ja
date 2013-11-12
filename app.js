@@ -12,4 +12,4 @@ $("#translate").click(function(ev) {
     });
 });
 
-$.getJSON(PING_ENDPOINT, function () {});
+$.get(PING_ENDPOINT, null, function () {}, 'text');
