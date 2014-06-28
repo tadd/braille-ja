@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-require 'spec_helper'
+require 'braille-ja'
 
 describe BrailleJa::Translator do
   it 'translates Japanese string "あいうえお" to Braille' do
