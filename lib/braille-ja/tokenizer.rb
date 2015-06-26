@@ -1,4 +1,5 @@
 # coding: utf-8
+require 'MeCab'
 
 module BrailleJa
   class Tokenizer
@@ -9,14 +10,43 @@ module BrailleJa
     SYLLABLE = /#{HIRAGANA_NORMAL}#{HIRAGANA_SMALL}|./
     
     def initialize(option={})
+      @mecab = MeCab::Tagger.new
     end
 
     def tokenize(source)
-      source.scan(SYLLABLE)
+      kana = to_kana(source)
+      kana.scan(SYLLABLE)
     end
 
     def self.tokenize(kana, option={})
       new(option).tokenize(kana)
+    end
+
+    def to_kana(source)
+      kana = ''
+      each_node(source) do |node|
+        yomi = get_yomi(node) || node.surface
+        yomi.force_encoding('utf-8')
+        kana += to_katakana(yomi)
+      end
+      kana
+    end
+
+    def each_node(source)
+      node = @mecab.parseToNode(source)
+      while node
+	yield node
+        node = node.next
+      end
+    end
+
+    def to_katakana(source)
+      source.tr('ァ-ン', 'ぁ-ん')
+    end
+
+    def get_yomi(node)
+      yomi = node.feature.split(',').last
+      yomi == '*' ? nil : yomi
     end
   end
 end
