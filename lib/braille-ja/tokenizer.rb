@@ -1,5 +1,5 @@
 # coding: utf-8
-require 'MeCab'
+require 'mecab'
 
 module BrailleJa
   class Tokenizer
