@@ -35,7 +35,7 @@ module BrailleJa
     def each_node(source)
       node = @mecab.parseToNode(source)
       while node
-	yield node
+        yield node
         node = node.next
       end
     end
