@@ -10,9 +10,9 @@ describe BrailleJa::Translator do
     expect('あいうえお'.to_braille).to eq '⠁⠃⠉⠋⠊'
   end
 
-  it 'never translates Japanese Kanji but leave as is' do
-    kanji = '半沢直樹倍返'
-    expect(kanji.to_braille).to eq kanji
+  it 'translates Japanese Kanji string easily' do
+    expect('半沢直樹倍返し'.to_braille).to eq 'はんざわなおきばいがえし'.to_braille
+    expect('私は海へ行きたい'.to_braille).to eq 'わたしわうみえいきたい'.to_braille
   end
 
   it 'translates alphabet or number' do
