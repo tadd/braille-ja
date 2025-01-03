@@ -9,7 +9,9 @@ http://tadd.github.io/braille-ja/
 
 次の行をあなたのプログラムのGemfileに追加してください。
 
-    gem 'braille-ja'
+```ruby
+gem 'braille-ja'
+```
 
 そして以下を実行します。
 
@@ -23,13 +25,15 @@ http://tadd.github.io/braille-ja/
 
 まだまだ未熟なので、一部しか翻訳できないのをご注意ください。
 
-    'あいうえお'.kana_to_braille
-    # => "⠁⠃⠉⠋⠊"
+```ruby
+'あいうえお'.to_braille
+# => "⠁⠃⠉⠋⠊"
+```
 
 ## 貢献するには
 
 1. Fork it!
-2. 機能別ブランチを作る (`git checkout -b my-new-feature`)
+2. 機能別ブランチを作る (`git switch -c my-new-feature`)
 3. 変更をコミットする (`git commit -am 'Add some feature'`)
 4. リモートにpushする (`git push origin my-new-feature`)
 5. Pull Request お願いします！
