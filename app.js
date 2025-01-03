@@ -1,7 +1,7 @@
 "use strict";
 
-var TRANSLATE_ENDPOINT = "http://braille-ja.herokuapp.com/translate";
-var PING_ENDPOINT = "http://braille-ja.herokuapp.com/ping";
+var TRANSLATE_ENDPOINT = "https://braille-ja.herokuapp.com/translate";
+var PING_ENDPOINT = "https://braille-ja.herokuapp.com/ping";
 var BRAILLE_PATTERN = /[\u2800-\u28ff]+/g;
 
 $(function () {
