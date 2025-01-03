@@ -1,19 +1,21 @@
 "use strict";
 
-var TRANSLATE_ENDPOINT = "https://braille-ja.herokuapp.com/translate";
-var PING_ENDPOINT = "https://braille-ja.herokuapp.com/ping";
-var BRAILLE_PATTERN = /[\u2800-\u28ff]+/g;
+const BASE = 'https://braille-ja.herokuapp.com';
+const TRANSLATE_ENDPOINT = `${BASE}/translate`;
+const PING_ENDPOINT = `${BASE}/ping`;
+const BRAILLE_PATTERN = /\p{Script=Braille}+/gu;
+const $ = id => document.getElementById(id);
+const queryParam = obj => new URLSearchParams(obj).toString();
 
-$(function () {
-    $("#translate").click(function(ev) {
-	$.getJSON(TRANSLATE_ENDPOINT, {text: $("#original").val()}).
-	    done(function (obj) {
-		var marked = obj["translated"].
-		    replace(BRAILLE_PATTERN, "<span class='braille-char'>$&</span>");
-		$("#translated").html(marked);
-	    });
+document.addEventListener('DOMContentLoaded', () => {
+    $('translate').addEventListener('click', async _ => {
+        const text = $('original').value;
+        const url = TRANSLATE_ENDPOINT + '?' + queryParam({ text });
+        const obj = await (await fetch(url)).json();
+	const marked = obj.translated.
+	      replace(BRAILLE_PATTERN, "<span class='braille-char'>$&</span>");
+	$('translated').innerHTML = marked;
     });
 });
 
-$.get(PING_ENDPOINT, 'text').
-    done(function() {});
+await fetch(PING_ENDPOINT); // ensure to awake Heroku
